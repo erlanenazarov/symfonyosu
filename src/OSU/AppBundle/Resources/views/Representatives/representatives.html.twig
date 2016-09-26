@@ -1,0 +1,49 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}Offical Representatives{% endblock %}
+
+{% block header_container_wrap %}
+    {{ parent() }}
+    <div class="page-title">Representatives</div>
+{% endblock %}
+
+{% block content %}
+    <p>Osh State University works closely with a number of carefully selected, professional representatives throughout the world. Each of our representatives is fully trained to provide advice about studying with us, our courses and living in the Kyrgyz Republic. They can also help you with your application and pre-arrival preparations.<br />
+        <br />
+        We cannot assume any responsibility for information given about the University by educational consultants who do not hold a valid agreement with us. Applying through an unauthorized consultant may result in your application being held up or possibly not being processed.</p>
+
+    {#<div class="osh-tab-header">#}
+        {#<ul>#}
+            {#<li class="active">#}
+                {#<img src="/<?=URL_PREFIX?>Public/images/flags/Kyrgyzstan.jpg" width="50" />#}
+            {#</li>#}
+            {#<li>#}
+                {#<img src="/<?=URL_PREFIX?>Public/images/flags/India.jpg" width="50" />#}
+            {#</li>#}
+            {#<li>#}
+                {#<img src="/<?=URL_PREFIX?>Public/images/flags/Pakistan.jpg" width="50" />#}
+            {#</li>#}
+            {#<li>#}
+                {#<img src="/<?=URL_PREFIX?>Public/images/flags/Bangladesh.jpg" width="50" />#}
+            {#</li>#}
+            {#<li>#}
+                {#<img src="/<?=URL_PREFIX?>Public/images/flags/UnatedArabEmirates.jpg" width="50" />#}
+            {#</li>#}
+            {#<li>#}
+                {#<img src="/<?=URL_PREFIX?>Public/images/flags/Nepal.jpg" width="50" />#}
+            {#</li>#}
+        {#</ul>#}
+    {#</div>#}
+
+    <div class="osh-tab" data-target="tab"></div>
+    <div class="osh-tab" data-target="tab"></div>
+    <div class="osh-tab" data-target="tab"></div>
+    <div class="osh-tab" data-target="tab"></div>
+    <div class="osh-tab" data-target="tab"></div>
+    <div class="osh-tab" data-target="tab"></div>
+
+    <div class="h1">useful links</div>
+    <a href="">Travel recommendations</a>
+    <br />
+    <a href="{{ path('tuition') }}">Tuition / Fee</a><br />
+{% endblock %}

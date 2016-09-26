@@ -1,0 +1,73 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}Contact Us{% endblock %}
+
+{% block header_container_wrap %}
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6068.759491088964!2d72.828284!3d40.488985!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x479c9182da7e572b!2z0JzQtdC00LjRhtC40L3RgdC60LjQuSDQpNCw0LrRg9C70YzRgtC10YIg0J7RiNCT0KM!5e0!3m2!1sru!2sus!4v1474106663502" width="930" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <div class="page-title">Contact Us</div>
+{% endblock %}
+
+{% block content %}
+    <div class="contacts-addresses">
+        <div class="contact-group-2">
+            <span>address</span>
+            <p>Medical Faculties Osh State University,<br />
+                Ak-Bura Campus, Isanov street, Yugo – Vostok,<br />
+                Osh city – 723500, Kyrgyz Republic (Kyrgyzstan)</p>
+        </div>
+        <div class="contact-group-2">
+            <span>email</span>
+            <p>oshmed@mail.ru</p>
+        </div>
+        <div class="contact-group-2">
+            <span>Phone / Viber / Whatsapp</span>
+            <p>+996 555 80 16 10</p>
+        </div>
+    </div>
+    <div class="form-2">
+        <div class="form-title-2">Fill the form and our specialist will contact with you</div>
+        <form method="POST" class="osh-form" action="#">
+            <div class="osh-form-group-2">
+                <label for="form-input-text">name</label>
+                {#<input type="text" class="osh-form-input" value="" placeholder="" id="form-input-text" data-fill="false" required />#}
+                {{ form_widget(contact_form.name) }}
+            </div>
+            <div class="osh-form-group-2">
+                <label for="form-input-email">E-Mail</label>
+                {#<input type="email" class="osh-form-input" value="" placeholder="" id="form-input-email" data-fill="false" required />#}
+                {{ form_widget(contact_form.email) }}
+            </div>
+            <div class="osh-form-group-2">
+                <label for="form-input-phone">Phone</label>
+                {#<input type="text" class="osh-form-input" value="" placeholder="" id="form-input-phone" data-fill="false" required />#}
+                {{ form_widget(contact_form.phone) }}
+            </div>
+            {{ form_widget(contact_form._token) }}
+            <div class="osh-footer-group-2">
+                <div class="footer-info"><img src="{{ asset('bundles/osuapp/images/icons/required.png') }}" /> Required</div>
+                <div class="footer-submit">
+                    <button type="submit">submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    <footer>
+        <div class="footer-header-2"><label for="contact-email-form">Subscribe and get<br />
+                the latest news</label></div>
+        <div class="footer-contact-form">
+            <form method="post" action="">
+                <input type="email" id="contact-email-form" value="" placeholder="E-mail" required />
+            </form>
+        </div>
+        <div class="contact-footer-sub-contacts">Ak-Bura Campus, Yugo Vostok,<br />
+            Osh city, 723500, Kyrgyz Republic<br />
+            oshmed@mail.ru </div>
+        <div class="footer-carcass-rights">
+            <div class="left-cel">2016 &copy; All rights reserved</div>
+            <div class="right-cel"><a href="http://sunrisestudio.pro" target="_blank">www.sunrisestudio.pro</a></div>
+        </div>
+    </footer>
+{% endblock %}

@@ -1,0 +1,52 @@
+
+index:
+    path:     /
+    defaults: { _controller: OSUAppBundle:Index:index }
+
+admission:
+    path:     /admission
+    defaults: { _controller: OSUAppBundle:Admission:admission }
+
+tuition:
+    path:     /tuition
+    defaults: { _controller: OSUAppBundle:Tuition:tuition }
+
+courses:
+    path:     /courses
+    defaults: { _controller: OSUAppBundle:Courses:courses }
+
+representatives:
+    path:     /representatives
+    defaults: { _controller: OSUAppBundle:Representatives:representatives }
+
+contact:
+    path:     /contact
+    defaults: { _controller: OSUAppBundle:Contacts:contact }
+
+dean:
+    path:     /dean
+    defaults: { _controller: OSUAppBundle:Dean:dean }
+
+posts:
+    path:     /posts
+    defaults: { _controller: OSUAppBundle:Posts:posts }
+
+post:
+    path:     /post/{id}
+    defaults: { _controller: OSUAppBundle:Posts:post }
+
+relationship:
+    path:     /relationship
+    defaults: { _controller: OSUAppBundle:Relationship:relationship }
+
+hostels:
+    path:     /hostels
+    defaults: { _controller: OSUAppBundle:Hostels:hostels }
+
+galleries:
+    path:     /galleries
+    defaults: { _controller: OSUAppBundle:Gallery:galleries }
+
+gallery:
+    path:     /gallery/{id}
+    defaults: { _controller: OSUAppBundle:Gallery:gallery }

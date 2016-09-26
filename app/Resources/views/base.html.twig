@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}{% endblock %} - International Medical Faculty</title>
+        {% block stylesheets %}
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/osuapp/css/style.css') }}" />
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        <div class="header">
+            <div class="header-carcass">
+                <div class="header-logo"></div>
+                <div class="header-social-links">
+                    <ul>
+                        <li><a href="#"><img src="{{ asset('bundles/osuapp/images/icons/facebook.png') }}" /></a></li>
+                        <li><a href="#"><img src="{{ asset('bundles/osuapp/images/icons/tweeter.png') }}" /></a></li>
+                        <li><a href="#"><img src="{{ asset('bundles/osuapp/images/icons/google.png') }}" /></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main-navigation">
+            <div class="main-navigation-carcass">
+                <ul>
+                    <li {% if location == 'home' %}class="active"{% endif %}><a href="{{ path('index') }}">Home</a></li>
+                    <li {% if location == 'admissions' %}class="active"{% endif %}><a href="{{ path('admission') }}">Admission</a></li>
+                    <li {% if location == 'tuition' %}class="active"{% endif %}><a href="{{ path('tuition') }}">Tuituion / Fee</a></li>
+                    <li {% if location == 'courses' %}class="active"{% endif %}><a href="{{ path('courses') }}">Courses</a></li>
+                    <li {% if location == 'representatives' %}class="active"{% endif %}><a href="{{ path('representatives') }}">Representatives</a></li>
+                    <li {% if location == 'contact' %}class="active"{% endif %}><a href="{{ path('contact') }}">Contact us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="header-container parent">
+            <div class="header-container-menu">
+                <div class="header-container-menu-item">
+                    <a href="">International Medical Faculty</a>
+                </div>
+                <ul class="header-container-sub-menu">
+                    <li {% if location == 'relationship' %}class="active"{% endif %}><img src="{{ asset('bundles/osuapp/images/icons/header_menu_elements.svg') }}" /><a href="{{ path('relationship') }}">International Relationship</a></li>
+                    <li {% if location == 'hostels' %}class="active"{% endif %}><img src="{{ asset('bundles/osuapp/images/icons/header_menu_elements.svg') }}" /><a href="{{ path('hostels') }}">Dormitory and hostels</a></li>
+                    <li {% if location == 'dean' %}class="active"{% endif %}><img src="{{ asset('bundles/osuapp/images/icons/header_menu_elements.svg') }}" /><a href="{{ path('dean') }}">Message from the Dean</a></li>
+                    <li {% if location == 'gallery' %}class="active"{% endif %}><img src="{{ asset('bundles/osuapp/images/icons/header_menu_elements.svg') }}" /><a href="">Gallery</a></li>
+                    <li {% if location == 'travel' %}class="active"{% endif %}><img src="{{ asset('bundles/osuapp/images/icons/header_menu_elements.svg') }}" /><a href="">Travel recommendations</a></li>
+                    <li {% if location == 'questions' %}class="active"{% endif %}><img src="{{ asset('bundles/osuapp/images/icons/header_menu_elements.svg') }}" /><a href="">Frequently Asked Questions</a></li>
+                </ul>
+                <div class="header-container-menu-item">
+                    <a href="#">Osh State University</a>
+                </div>
+                <ul class="header-container-sub-menu">
+                    <li {% if location == 'history' %}class="active"{% endif %}><img src="{{ asset('bundles/osuapp/images/icons/header_menu_elements.svg') }}" /><a href="">History</a></li>
+                    <li {% if location == 'rector' %}class="active"{% endif %}><img src="{{ asset('bundles/osuapp/images/icons/header_menu_elements.svg') }}" /><a href="">Message from the rector</a></li>
+                    <li {% if location == 'students' %}class="active"{% endif %}><img src="{{ asset('bundles/osuapp/images/icons/header_menu_elements.svg') }}" /><a href="">Student life</a></li>
+                </ul>
+            </div>
+            <div class="header-container-wrap">
+                {% block header_container_wrap %}
+                    <div class="custom-header-banner">
+                        <div class="dark-effect-2"></div>
+                        <div class="custom-header-banner-text">
+                            <div class="custom-header-banner-title">the path<br />begins here</div>
+                            <div class="custom-header-banner-subtitle">start your application</div>
+                        </div>
+                    </div>
+                {% endblock %}
+            </div>
+        </div>
+
+        <div class="main-content parent">
+            {% include '@OSUApp/Index/sidebar.html.twig' %}
+            <div class="main-content-container">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+
+        {% block footer %}
+        <footer>
+            <div class="footer-header">Keep in touch</div>
+            <div class="form">
+                <div class="form-title">Fill the form and our specialist will contact with you</div>
+                <form method="POST" class="osh-form" action="#">
+                    <div class="osh-form-group">
+                        <label for="form_name">name</label>
+                        {#<input type="text" class="osh-form-input" value="" placeholder="" id="form-input-text" data-fill="false" required />#}
+                        {{ form_widget(contact_form.name) }}
+                    </div>
+                    <div class="osh-form-group">
+                        <label for="form_email">E-Mail</label>
+                        {#<input type="email" class="osh-form-input" value="" placeholder="" id="form-input-email" data-fill="false" required />#}
+                        {{ form_widget(contact_form.email) }}
+                    </div>
+                    <div class="osh-form-group">
+                        <label for="form_phone">Phone</label>
+                        {#<input type="text" class="osh-form-input" value="" placeholder="" id="form-input-phone" data-fill="false" required />#}
+                        {{ form_widget(contact_form.phone) }}
+                    </div>
+                    {{ form_widget(contact_form._token) }}
+                    <div class="osh-footer-group">
+                        <div class="footer-info"><img src="{{ asset('bundles/osuapp/images/icons/required.png') }}" /> Required</div>
+                        <div class="footer-submit">
+                            <button type="submit">submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="footer-contacts">
+                <div class="contact-group">
+                    <span>address</span>
+                    <p>Medical Faculties Osh State University,<br />
+                        Ak-Bura Campus, Isanov street, Yugo – Vostok,<br />
+                        Osh city – 723500, Kyrgyz Republic (Kyrgyzstan)</p>
+                </div>
+                <div class="contact-group">
+                    <span>email</span>
+                    <p>oshmed@mail.ru</p>
+                </div>
+                <div class="contact-group">
+                    <span>Phone / Viber / Whatsapp</span>
+                    <p>+996 555 80 16 10</p>
+                </div>
+            </div>
+            <div class="footer-carcass-rights">
+                <div class="left-cel">2016 &copy; All rights reserved</div>
+                <div class="right-cel"><a href="http://sunrisestudio.pro" target="_blank">www.sunrisestudio.pro</a></div>
+            </div>
+        </footer>
+        {% endblock %}
+        {% block javascripts %}
+            <script src="{{ asset('bundles/osuapp/js/jquery-3.1.0.min.js') }}"></script>
+            <script>
+                $(document).ready(function () {
+                    $('input.osh-form-input').on('input', function() {
+                        if($(this).val().length != 0) {
+                            $(this).attr('data-fill', 'true');
+                        } else {
+                            $(this).attr('data-fill', 'false');
+                        }
+                    });
+                });
+
+                $(document).ready(function() {
+                    var moths = {
+                        '01' : 'January',
+                        '02' : 'February',
+                        '03' : 'March',
+                        '04' : 'April',
+                        '05' : 'May',
+                        '06' : 'June',
+                        '07' : 'July',
+                        '08' : 'August',
+                        '09' : 'September',
+                        '10' : 'October',
+                        '11' : 'November',
+                        '12' : 'December'
+                    };
+
+                    var day = '';
+                    var moth = '';
+                    var year = '';
+
+                    function ParseDate(data) {
+                        var array = data.split('-');
+
+                        year = array[0];
+                        moth = moths[array[1]];
+                        day = array[2];
+                    }
+
+                    $('.new-item-date').each(function() {
+                        ParseDate($(this).html());
+
+                        $(this).html(moth + ' ' + day + ', ' + year);
+                    });
+                });
+            </script>
+        {% endblock %}
+    </body>
+</html>

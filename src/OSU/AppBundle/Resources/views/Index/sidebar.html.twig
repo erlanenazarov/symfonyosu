@@ -1,0 +1,21 @@
+{% set length = 100 %}
+
+<div class="main-content-sidebar">
+    <div class="sidebar-block block-news">
+        <div class="block-news-header">
+            latest news
+        </div>
+        <div class="block-news-content">
+            {% for post in posts %}
+            <div class="news-item">
+                <div class="new-item-date">{{ post.date|date('Y-m-d') }}</div>
+                <div class="new-item-content">{% if post.content|length < length %}{{ post.content }}{% else %}{{ post.content|slice(0, length) }}...{% endif %}</div>
+                <div class="new-item-entry-link"><a href="{{ path('post', {id: post.id}) }}">Read more</a></div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="block-news-footer">
+            <a href="{{ path('posts') }}">All news</a>
+        </div>
+    </div>
+</div>
