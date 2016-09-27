@@ -1141,6 +1141,7 @@ h2 {
     color: #ffffff;
     left: 50%;
     top: 50%;
+    text-transform: uppercase;
 
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);

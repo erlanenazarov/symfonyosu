@@ -1,7 +1,21 @@
 {% extends "::base.html.twig" %}
 
-{% block title %}OSUAppBundle:Gallery:gallery{% endblock %}
+{% block title %}{{ gallery.name }}{% endblock %}
 
-{% block body %}
-<h1>Welcome to the Gallery:gallery page</h1>
+{% block header_container_wrap %}
+    <div class="custom-header-banner" style="background: url('{% path gallery.GalleryHasMedias[0].media, 'big' %}') no-repeat center; background-size: cover;">
+        <div class="dark-effect-6"></div>
+        <div class="header-center-text">{{ gallery.name }}</div>
+    </div>
+    <div class="page-title">{{ gallery.name }}</div>
+{% endblock %}
+
+{% block content %}
+    <div class="gallery-grid-view">
+        {% for ghm in gallery.GalleryHasMedias %}
+        <div class="one-media">
+            <img src="{% path ghm.media, 'small' %}" alt="image" />
+        </div>
+        {% endfor %}
+    </div>
 {% endblock %}

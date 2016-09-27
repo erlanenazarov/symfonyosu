@@ -42,15 +42,15 @@
                     <li {% if location == 'relationship' %}class="active"{% endif %}><img src="{{ asset('bundles/osuapp/images/icons/header_menu_elements.svg') }}" /><a href="{{ path('relationship') }}">International Relationship</a></li>
                     <li {% if location == 'hostels' %}class="active"{% endif %}><img src="{{ asset('bundles/osuapp/images/icons/header_menu_elements.svg') }}" /><a href="{{ path('hostels') }}">Dormitory and hostels</a></li>
                     <li {% if location == 'dean' %}class="active"{% endif %}><img src="{{ asset('bundles/osuapp/images/icons/header_menu_elements.svg') }}" /><a href="{{ path('dean') }}">Message from the Dean</a></li>
-                    <li {% if location == 'gallery' %}class="active"{% endif %}><img src="{{ asset('bundles/osuapp/images/icons/header_menu_elements.svg') }}" /><a href="">Gallery</a></li>
-                    <li {% if location == 'travel' %}class="active"{% endif %}><img src="{{ asset('bundles/osuapp/images/icons/header_menu_elements.svg') }}" /><a href="">Travel recommendations</a></li>
-                    <li {% if location == 'questions' %}class="active"{% endif %}><img src="{{ asset('bundles/osuapp/images/icons/header_menu_elements.svg') }}" /><a href="">Frequently Asked Questions</a></li>
+                    <li {% if location == 'gallery' %}class="active"{% endif %}><img src="{{ asset('bundles/osuapp/images/icons/header_menu_elements.svg') }}" /><a href="{{ path('galleries') }}">Gallery</a></li>
+                    <li {% if location == 'travel' %}class="active"{% endif %}><img src="{{ asset('bundles/osuapp/images/icons/header_menu_elements.svg') }}" /><a href="{{ path('travel') }}">Travel recommendations</a></li>
+                    <li {% if location == 'questions' %}class="active"{% endif %}><img src="{{ asset('bundles/osuapp/images/icons/header_menu_elements.svg') }}" /><a href="{{ path('questions') }}">Frequently Asked Questions</a></li>
                 </ul>
                 <div class="header-container-menu-item">
                     <a href="#">Osh State University</a>
                 </div>
                 <ul class="header-container-sub-menu">
-                    <li {% if location == 'history' %}class="active"{% endif %}><img src="{{ asset('bundles/osuapp/images/icons/header_menu_elements.svg') }}" /><a href="">History</a></li>
+                    <li {% if location == 'history' %}class="active"{% endif %}><img src="{{ asset('bundles/osuapp/images/icons/header_menu_elements.svg') }}" /><a href="{{ path('history') }}">History</a></li>
                     <li {% if location == 'rector' %}class="active"{% endif %}><img src="{{ asset('bundles/osuapp/images/icons/header_menu_elements.svg') }}" /><a href="">Message from the rector</a></li>
                     <li {% if location == 'students' %}class="active"{% endif %}><img src="{{ asset('bundles/osuapp/images/icons/header_menu_elements.svg') }}" /><a href="">Student life</a></li>
                 </ul>
@@ -141,7 +141,7 @@
                     });
                 });
 
-                $(document).ready(function() {
+                function ReplaceDate(element) {
                     var moths = {
                         '01' : 'January',
                         '02' : 'February',
@@ -169,11 +169,16 @@
                         day = array[2];
                     }
 
-                    $('.new-item-date').each(function() {
+                    $(element).each(function() {
                         ParseDate($(this).html());
 
                         $(this).html(moth + ' ' + day + ', ' + year);
                     });
+                }
+
+                $(document).ready(function () {
+                    ReplaceDate('.new-item-date');
+                    ReplaceDate('.date > span');
                 });
             </script>
         {% endblock %}

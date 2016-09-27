@@ -1,7 +1,30 @@
 {% extends "::base.html.twig" %}
 
-{% block title %}OSUAppBundle:Gallery:galleries{% endblock %}
+{% block title %}Photo Galllery{% endblock %}
 
-{% block body %}
-<h1>Welcome to the Gallery:galleries page</h1>
+{% block header_container_wrap %}
+    <div class="gallery-header-banner-1">
+        <div class="dark-effect-6"></div>
+        <div class="gallery-header-banner-text">
+            We make the most<br />
+            <span>of every moment</span>
+        </div>
+    </div>
+    <div class="page-title">Gallery</div>
+{% endblock %}
+
+{% block content %}
+    <div class="gallery-grid-view">
+        {% for gallery in galleries %}
+            <div class="gallery-content">
+                <div class="preview">
+                    <a href="{{ path('gallery', {id: gallery.id}) }}"><img src="{% path gallery.GalleryHasMedias[0].media, 'small' %}" /></a>
+                </div>
+                <div class="title">
+                    <a href="{{ path('gallery', {id: gallery.id}) }}">{{ gallery.name }}</a>
+                </div>
+                <div class="date"><img src="{{ asset('bundles/osuapp/images/icons/date-icon.png') }}"/> <span>{{ gallery.createdAt|date('Y-m-d') }}</span></div>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}

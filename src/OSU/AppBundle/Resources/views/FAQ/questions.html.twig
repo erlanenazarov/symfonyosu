@@ -1,0 +1,25 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}FAQ{% endblock %}
+
+{% block header_container_wrap %}
+    {{ parent() }}
+    <div class="page-title">FAQ</div>
+{% endblock %}
+
+{% block content %}
+    <div class="h1">I want to know if programs / courses offered by university are recognized in my country ?</div>
+    <p>Osh State University is a Government sector institution recognized by Ministry of education and Ministry of Public health of the Kyrgyz Republic. It is listed  with WHO – World directory of medical schools, IMED by FAIMER, Avicenna directory. Osh state university is listed with UNESCO directory and is member of International association of Universities, Association of European universities and Association of East European universities. Courses are recognized worldwide.</p>
+    <div class="h1">How can I apply for admission?</div>
+    <p>You may apply online or visit one of our official representatives in your country. For more information visit <a href="{{ path('admission') }}">Admission</a> page</p>
+    <div class="h1">If I am accepted, How can I get student visa to enter Kyrgyz Republic ?</div>
+    <p>If you are accepted for admission, We will process you invitation letter for visa from Ministry of foreign affairs. After that You can apply visa at nearest Kyrgyz Embassy or in some countries like India We or some of our representatives can provide you visa service on your doorstep by courier.</p>
+    <div class="h1">Yes ! I got visa, How can I travel to Osh ?</div>
+    <p>Osh International airport is located within Osh city and just few kilometres away from the students hostel, Students can take connecting flights to Osh via Bishkek, Istanbul airports. For more information visit <a href="{{ path('travel') }}">Travel Recommendation</a> page</p>
+    <div class="h1">Who will receive me on airport ?</div>
+    <p>Please inform us about your flight schedule, Scan us your air ticket. One of our staff members will receive you on Osh International airport.</p>
+    <div class="h1">I am a transfer student, Do you accept transfer students and the admission process same for me as fresh candidates ?</div>
+    <p>Well ! Admission process for transfer students is almost same, We evaluate your documents against our curriculum and admission committee decides eligibility and level of admission for transfer students from other universities.</p>
+    <div class="h1">What is the best way to contact you ?</div>
+    <p>Generally It’s email but If It’s urgent to contact us, write a message on Viber or Whatsapp, We will reply you in minutes. Average response time by email is within a day and Viber / Whatsapp within 5 minutes. For more details visit <a href="{{ path('contact') }}">Contacts</a> page</p>
+{% endblock %}

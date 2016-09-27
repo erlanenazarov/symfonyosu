@@ -50,3 +50,15 @@ galleries:
 gallery:
     path:     /gallery/{id}
     defaults: { _controller: OSUAppBundle:Gallery:gallery }
+
+travel:
+    path:     /travel
+    defaults: { _controller: OSUAppBundle:Travel:travel }
+
+questions:
+    path:     /FAQ
+    defaults: { _controller: OSUAppBundle:FAQ:questions }
+
+history:
+    path:     /osh-state-university/history
+    defaults: { _controller: OSUAppBundle:History:history }
