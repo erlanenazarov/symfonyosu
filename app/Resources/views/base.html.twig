@@ -6,7 +6,8 @@
         {% block stylesheets %}
             <link rel="stylesheet" type="text/css" href="{{ asset('bundles/osuapp/css/style.css') }}" />
         {% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        {#<link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />#}
+        <link rel="icon" type="image/png" href="{{ asset('bundles/osuapp/images/icons/favicon-32x32.png') }}" sizes="32x32" />
     </head>
     <body>
         <div class="header">
@@ -40,7 +41,7 @@
                 </div>
                 <ul class="header-container-sub-menu">
                     <li {% if location == 'relationship' %}class="active"{% endif %}><img src="{{ asset('bundles/osuapp/images/icons/header_menu_elements.svg') }}" /><a href="{{ path('relationship') }}">International Relationship</a></li>
-                    <li {% if location == 'hostels' %}class="active"{% endif %}><img src="{{ asset('bundles/osuapp/images/icons/header_menu_elements.svg') }}" /><a href="{{ path('hostels') }}">Dormitory and hostels</a></li>
+                    {#<li {% if location == 'hostels' %}class="active"{% endif %}><img src="{{ asset('bundles/osuapp/images/icons/header_menu_elements.svg') }}" /><a href="{{ path('hostels') }}">Dormitory and hostels</a></li>#}
                     <li {% if location == 'dean' %}class="active"{% endif %}><img src="{{ asset('bundles/osuapp/images/icons/header_menu_elements.svg') }}" /><a href="{{ path('dean') }}">Message from the Dean</a></li>
                     <li {% if location == 'gallery' %}class="active"{% endif %}><img src="{{ asset('bundles/osuapp/images/icons/header_menu_elements.svg') }}" /><a href="{{ path('galleries') }}">Gallery</a></li>
                     <li {% if location == 'travel' %}class="active"{% endif %}><img src="{{ asset('bundles/osuapp/images/icons/header_menu_elements.svg') }}" /><a href="{{ path('travel') }}">Travel recommendations</a></li>
@@ -51,8 +52,8 @@
                 </div>
                 <ul class="header-container-sub-menu">
                     <li {% if location == 'history' %}class="active"{% endif %}><img src="{{ asset('bundles/osuapp/images/icons/header_menu_elements.svg') }}" /><a href="{{ path('history') }}">History</a></li>
-                    <li {% if location == 'rector' %}class="active"{% endif %}><img src="{{ asset('bundles/osuapp/images/icons/header_menu_elements.svg') }}" /><a href="">Message from the rector</a></li>
-                    <li {% if location == 'students' %}class="active"{% endif %}><img src="{{ asset('bundles/osuapp/images/icons/header_menu_elements.svg') }}" /><a href="">Student life</a></li>
+                    <li {% if location == 'rector' %}class="active"{% endif %}><img src="{{ asset('bundles/osuapp/images/icons/header_menu_elements.svg') }}" /><a href="{{ path('rector') }}">Message from the rector</a></li>
+                    <li {% if location == 'students' %}class="active"{% endif %}><img src="{{ asset('bundles/osuapp/images/icons/header_menu_elements.svg') }}" /><a href="{{ path('students_live') }}">Student life</a></li>
                 </ul>
             </div>
             <div class="header-container-wrap">
@@ -81,27 +82,25 @@
             <div class="footer-header">Keep in touch</div>
             <div class="form">
                 <div class="form-title">Fill the form and our specialist will contact with you</div>
-                <form method="POST" class="osh-form" action="#">
+                <form method="POST" class="osh-form" action="{{ path('sendmail') }}" id="request_form">
                     <div class="osh-form-group">
                         <label for="form_name">name</label>
-                        {#<input type="text" class="osh-form-input" value="" placeholder="" id="form-input-text" data-fill="false" required />#}
                         {{ form_widget(contact_form.name) }}
                     </div>
                     <div class="osh-form-group">
                         <label for="form_email">E-Mail</label>
-                        {#<input type="email" class="osh-form-input" value="" placeholder="" id="form-input-email" data-fill="false" required />#}
                         {{ form_widget(contact_form.email) }}
                     </div>
                     <div class="osh-form-group">
                         <label for="form_phone">Phone</label>
-                        {#<input type="text" class="osh-form-input" value="" placeholder="" id="form-input-phone" data-fill="false" required />#}
                         {{ form_widget(contact_form.phone) }}
                     </div>
                     {{ form_widget(contact_form._token) }}
                     <div class="osh-footer-group">
                         <div class="footer-info"><img src="{{ asset('bundles/osuapp/images/icons/required.png') }}" /> Required</div>
                         <div class="footer-submit">
-                            <button type="submit">submit</button>
+                            <button type="submit" id="submit-button">submit</button>
+                            <img src="{{ asset('bundles/osuapp/images/spin.gif') }}" id="loadingEffect" style="display: none;" />
                         </div>
                     </div>
                 </form>
@@ -109,17 +108,15 @@
             <div class="footer-contacts">
                 <div class="contact-group">
                     <span>address</span>
-                    <p>Medical Faculties Osh State University,<br />
-                        Ak-Bura Campus, Isanov street, Yugo – Vostok,<br />
-                        Osh city – 723500, Kyrgyz Republic (Kyrgyzstan)</p>
+                    <p>{{ address }}</p>
                 </div>
                 <div class="contact-group">
                     <span>email</span>
-                    <p>oshmed@mail.ru</p>
+                    <p>{{ email }}</p>
                 </div>
                 <div class="contact-group">
-                    <span>Phone / Viber / Whatsapp</span>
-                    <p>+996 555 80 16 10</p>
+                    <span>Whatsapp Call / Viber Call / Message:</span>
+                    <p>{{ phone }}</p>
                 </div>
             </div>
             <div class="footer-carcass-rights">
@@ -180,6 +177,42 @@
                     ReplaceDate('.new-item-date');
                     ReplaceDate('.date > span');
                 });
+            </script>
+            <script>
+                var form = $('#request_form');
+
+                $(form).on('submit', function(e) {
+                    e.preventDefault();
+                    $('#submit-button').fadeOut('slow', function() {
+                        $('#loadingEffect').fadeIn('slow');
+                    });
+                    $.ajax({
+                        type: 'POST',
+                        dataType: 'JSON',
+                        url: $(form).attr('action'),
+                        data: $(form).serialize(),
+                        success: function(response) {
+                            if(response.result == 'ok') {
+                                $('#loadingEffect').fadeOut('slow');
+                                $('#submit-button').fadeIn('slow', function() {
+                                    alert('Message was successfully delivered!');
+                                });
+                            } else {
+                                $('#loadingEffect').fadeOut('slow');
+                                $('#submit-button').fadeIn('slow', function() {
+                                    alert(response.message);
+                                });
+                            }
+                        },
+                        error: function() {
+                            $('#loadingEffect').fadeOut('slow');
+                            $('#submit-button').fadeIn('slow', function() {
+                                alert('Sending failed! Response error! please try later!');
+                            });
+                        }
+                    });
+                });
+
             </script>
         {% endblock %}
     </body>

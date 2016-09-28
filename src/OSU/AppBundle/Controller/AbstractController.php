@@ -45,9 +45,15 @@ class AbstractController extends Controller {
         $em = $this->getDoctrine()->getManager();
         $posts = $em->getRepository('OSUEntityBundle:Post')->findBy(array(), array(), 2);
 
+        $contacts = $em->getRepository('OSUEntityBundle:Contacts')->findAll();
+        $contacts = $contacts[0];
+
         return array(
             'contact_form' => $this->buildContactForm()->createView(),
-            'posts' => $posts
+            'posts' => $posts,
+            'address' => $contacts->getLocation(),
+            'email' => $contacts->getEmail(),
+            'phone' => $contacts->getPhone()
         );
     }
 }

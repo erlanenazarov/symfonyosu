@@ -23,6 +23,11 @@ contact:
     path:     /contact
     defaults: { _controller: OSUAppBundle:Contacts:contact }
 
+sendmail:
+    path: /contacts/send/mail
+    defaults: { _controller: OSUAppBundle:Contacts:sendMail }
+    methods: POST
+
 dean:
     path:     /dean
     defaults: { _controller: OSUAppBundle:Dean:dean }
@@ -62,3 +67,11 @@ questions:
 history:
     path:     /osh-state-university/history
     defaults: { _controller: OSUAppBundle:History:history }
+
+rector:
+    path:     /message-from-rector
+    defaults: { _controller: OSUAppBundle:Rector:rector }
+
+students_live:
+    path:     /students-live
+    defaults: { _controller: OSUAppBundle:Students:studentsLive }

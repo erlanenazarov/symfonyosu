@@ -1,0 +1,27 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}Students Live{% endblock %}
+
+{% block header_container_wrap %}
+    {{ parent() }}
+    <div class="page-title">Students Live</div>
+{% endblock %}
+
+{% block content %}
+    <p>Life at Osh is something for everyone. Students are actively engaged in a broad array of academic, cultural, social, and political organizations.</p>
+    <p><img src="{{ asset('bundles/osuapp/images/student-1.jpg') }}" style="float: left; width: 200px; margin-right: 10px;" />Write for the University news publication, work with university leaers through student government, make your debut with visual and performing arts groups, and lend a hand in community service. Osh offers a student life that can be tailored to your own tastes. It’s easy to immerse yourself in exciting opportunities and experiences both at University and across the city.<br />
+        You’ll find a vast number of ways to enjoy yourself, keep busy and make friends on campus. When you find time, You can go to walk across the city, on Suleiman too hilltop, watch movie and party at restaurants. </p>
+    <p>Osh State University is located in the heart of the city and there are perfect connections to all parts of the city. The student population is drawn from more than 20 different worldwide countries like India, Turkey, </p>
+    <p><img src="{{ asset('bundles/osuapp/images/student-2.jpg') }}" style="float: left; width: 200px; margin-right: 10px;" />Pakistan, Nepal, IMG_3096Bangladesh, United States, Canada, United Kingdom and CIS countries etc.<br />
+        Osh State University has been active to help students make the necessary adjustments to university life. Osh State University provides reliable facilties for students to express fully their intellectual and scientific capabilities.<br />
+        Gymnasium and a Cultural Center offer brilliant opportunities for students to be active in sports and participate in the cultural life (Theater, folk etc. sections) </p>
+    <p>A well-developed student exchange and summer school program is a must for the overall development of students. IMG_3007If you haven’t already visited Kyrgyzstan, you have a lot to look forward to.</p>
+    <p><img src="{{ asset('bundles/osuapp/images/students-3.jpg') }}" style="float: left; width: 200px; margin-right: 10px;" />Kyrgyzstan is a country for everyone, catering for all tastes and cultures. Osh is beautiful city. There’s an<br />
+        abundance of historic sites so, you can busy yourself with sightseeing or a vast selection of galleries, museums, theatres and exhibitions.<br />
+        Osh State University has 9 hostels. University will provide students with the hostel. Books and other study material are available in library for the students. Students are not only busy with their studies, They can do the scientific research work and they can also manage to find time for sports -football, swimming, tennis, cricket etc.</p>
+    <p><img src="{{ asset('bundles/osuapp/images/student-4.jpg') }}" style="float: left; width: 200px; margin-right: 10px;" />Students can have rest in sports and health recreation camp on the picturesque Issyk-Kul lake. at branches of the Faculty of extracurricular education, art and sports club or student’s theatre.<br />
+        Cricket Tournament is organised every year in april for international students. Eid, Diwali and Holi, Navroz are prominent festivals. </p>
+    <p>&nbsp;</p>
+    <div class="h1">See more photos in Gallery</div>
+    <p><a href="{{ path('galleries') }}">Gallery</a></p>
+{% endblock %}

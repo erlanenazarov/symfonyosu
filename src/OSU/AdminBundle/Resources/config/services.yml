@@ -3,4 +3,10 @@ services:
         class: OSU\AdminBundle\Admin\PostAdmin
         arguments: [~, OSU\EntityBundle\Entity\Post, SonataAdminBundle:CRUD]
         tags:
-            - {name: sonata.admin, manager_type: orm, group: Новости, label: Post}
+            - {name: sonata.admin, manager_type: orm, group: News, label: Post}
+
+    osu.admin.contacts:
+        class: OSU\AdminBundle\Admin\ContactsAdmin
+        arguments: [~, OSU\EntityBundle\Entity\Contacts, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Contacts, label: Contacts}
