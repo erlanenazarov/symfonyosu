@@ -14,7 +14,7 @@
     <div class="gallery-grid-view">
         {% for ghm in gallery.GalleryHasMedias %}
         <div class="one-media">
-            <img src="{% path ghm.media, 'small' %}" alt="image" />
+            <img src="{% path ghm.media, 'small' %}" alt="image" class="md-trigger" data-modal="show-full-picture" data-full="{% path ghm.media, 'reference' %}" />
         </div>
         {% endfor %}
     </div>

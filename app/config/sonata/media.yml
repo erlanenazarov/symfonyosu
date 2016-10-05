@@ -7,7 +7,7 @@ sonata_media:
                 - sonata.media.provider.image
             formats:
                 small: { width: 200, quality: 100}
-                big:   { width: 500 , quality: 70}
+                big:   { width: 500 , quality: 100}
 
     cdn:
         server:

@@ -5,15 +5,21 @@
         <title>{% block title %}{% endblock %} - International Medical Faculty</title>
         {% block stylesheets %}
             <link rel="stylesheet" type="text/css" href="{{ asset('bundles/osuapp/css/style.css') }}" />
-            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/osuapp/css/modals.css') }}" />
+            {#<link rel="stylesheet" type="text/css" href="{{ asset('bundles/osuapp/css/modals.css') }}" />#}
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/osuapp/css/component.css') }}" />
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/osuapp/css/default.css') }}" />
         {% endblock %}
         {#<link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />#}
         <link rel="icon" type="image/png" href="{{ asset('bundles/osuapp/images/icons/favicon-32x32.png') }}" sizes="32x32" />
     </head>
     <body>
-        <div class="modal">
-            <div class="modal-lg">
-                Heeey!
+        <div class="md-modal md-effect-11" id="show-full-picture">
+            <div class="md-content">
+                <h3>Modal Dialog</h3>
+                <div class="md-body">
+                    <div class="md-close">X</div>
+                    <img src="" id="modal-preferences-picture" />
+                </div>
             </div>
         </div>
         <div class="header">
@@ -131,7 +137,16 @@
             </div>
         </footer>
         {% endblock %}
+        <div class="md-overlay"></div>
         {% block javascripts %}
+            <script>
+                var polyfilter_scriptpath = '{{ asset('bundles/osuapp/js/') }}';
+            </script>
+            <script src="{{ asset('bundles/osuapp/js/classie.js') }}"></script>
+            <script src="{{ asset('bundles/osuapp/js/css-filters-polyfill.js') }}"></script>
+            <script src="{{ asset('bundles/osuapp/js/cssParser.js') }}"></script>
+            <script src="{{ asset('bundles/osuapp/js/modalEffects.js') }}"></script>
+            <script src="{{ asset('bundles/osuapp/js/modernizr.custom.js') }}"></script>
             <script src="{{ asset('bundles/osuapp/js/jquery-3.1.0.min.js') }}"></script>
             <script>
                 $(document).ready(function () {
@@ -182,6 +197,18 @@
                 $(document).ready(function () {
                     ReplaceDate('.new-item-date');
                     ReplaceDate('.date > span');
+                });
+            </script>
+            <script>
+                $(document).ready(function() {
+                    var ModalHandler = $('#show-full-picture');
+                    var PrefHandler = $('#modal-preferences-picture');
+
+                    $('.md-trigger').on('click', function() {
+                        if($(ModalHandler).hasClass('md-show')) {
+                            $(PrefHandler).attr('src', $(this).attr('data-full'));
+                        }
+                    });
                 });
             </script>
             <script>

@@ -1206,3 +1206,14 @@ h2 {
     border: 0;
     margin-bottom: 0;
 }
+
+
+
+.md-close {
+    height: 30px;
+    text-align: right;
+    font-family: PTSansRegular, sans-serif;
+    font-size: 16px;
+    color: #000000;
+    cursor: pointer;
+}
