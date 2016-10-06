@@ -2,6 +2,23 @@
 
 {% block title %}Home{% endblock %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/osuapp/slick/slick.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/osuapp/slick/slick-theme.css') }}" />
+{% endblock %}
+
+{% block header_container_wrap %}
+    <div class="single-item">
+        <div><img src="{{ asset('bundles/osuapp/images/slider/s1.png') }}" /></div>
+        <div><img src="{{ asset('bundles/osuapp/images/slider/s2.png') }}" /></div>
+        <div><img src="{{ asset('bundles/osuapp/images/slider/s3.png') }}" /></div>
+        <div><img src="{{ asset('bundles/osuapp/images/slider/s4.png') }}" /></div>
+        <div><img src="{{ asset('bundles/osuapp/images/slider/s5.png') }}" /></div>
+        <div><img src="{{ asset('bundles/osuapp/images/slider/s6.png') }}" /></div>
+    </div>
+{% endblock %}
+
 {% block content %}
     <h1>Dear colleagues, our friends and students!</h1>
     <p>We are pleased to greet you on the webpage of International Medical Faculty of Osh State University (OshSU), the educational flagship in Kyrgyzstan and a classical international university, which is a member of Shanghai Association of Universities.<br />
@@ -30,4 +47,19 @@
     <div class="hr"></div>
     <span class="sub-text">With sincere respect,<br />
                                    International Medical Faculty Team of Osh State University</span>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/osuapp/slick/slick.js') }}"></script>
+    <script>
+        $('.single-item').slick({
+            arrows: false,
+            dots: true,
+            infinite: true,
+            speed: 700,
+            autoplay: true,
+            autospeed: 200
+        });
+    </script>
 {% endblock %}

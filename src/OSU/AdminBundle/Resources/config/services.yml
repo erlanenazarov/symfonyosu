@@ -10,3 +10,9 @@ services:
         arguments: [~, OSU\EntityBundle\Entity\Contacts, SonataAdminBundle:CRUD]
         tags:
             - {name: sonata.admin, manager_type: orm, group: Contacts, label: Contacts}
+
+    osu_admin.admin.social:
+        class: OSU\AdminBundle\Admin\SocialAdmin
+        arguments: [~, OSU\EntityBundle\Entity\Social, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: Social Links, label: Social}

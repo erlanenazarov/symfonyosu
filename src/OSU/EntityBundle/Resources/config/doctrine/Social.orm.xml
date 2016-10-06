@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity repository-class="OSU\EntityBundle\Repository\SocialRepository" name="OSU\EntityBundle\Entity\Social">
+    <id name="id" type="integer" column="id">
+      <generator strategy="AUTO"/>
+    </id>
+    <field name="facebook" type="string" column="facebook" length="255" nullable="true"/>
+    <field name="twitter" type="string" column="twitter" length="255" nullable="true"/>
+    <field name="googlePlus" type="string" column="googlePlus" length="255" nullable="true"/>
+  </entity>
+</doctrine-mapping>

@@ -48,12 +48,21 @@ class AbstractController extends Controller {
         $contacts = $em->getRepository('OSUEntityBundle:Contacts')->findAll();
         $contacts = $contacts[0];
 
+        $socialLinks = $em->getRepository('OSUEntityBundle:Social')->find(0);
+
+        $facebook = !is_null($socialLinks) ? $socialLinks->getFacebook() : '#';
+        $twitter = !is_null($socialLinks) ? $socialLinks->getTwitter() : '#';
+        $googlePlus = !is_null($socialLinks) ? $socialLinks->getGooglePlus() : '#';
+
         return array(
             'contact_form' => $this->buildContactForm()->createView(),
             'posts' => $posts,
             'address' => $contacts->getLocation(),
             'email' => $contacts->getEmail(),
-            'phone' => $contacts->getPhone()
+            'phone' => $contacts->getPhone(),
+            'facebook' => $facebook,
+            'twitter' => $twitter,
+            'google' => $googlePlus
         );
     }
 }
