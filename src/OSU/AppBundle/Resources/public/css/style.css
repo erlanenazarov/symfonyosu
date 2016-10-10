@@ -373,7 +373,7 @@ a:hover {
     height: auto;
     position: relative;
     padding-top: 65px;
-    padding-left: 42px;
+    padding-left: 0;
     display: inline-block;
     margin: 0;
     background: #ffffff;
@@ -383,7 +383,7 @@ a:hover {
     width: 202px;
     height: auto;
     position: relative;
-    margin-bottom: 20px;
+    margin: 0 auto 20px auto;
 }
 
 .block-news-header {
@@ -565,9 +565,10 @@ a:hover {
 }
 
 .main-content-container {
-    width: 832px;
+    width: 870px;
     padding-top: 40px;
     padding-left: 20px;
+    padding-right: 20px;
     display: inline-block;
     position: relative;
     /*left: 272px;*/
@@ -1227,4 +1228,170 @@ h2 {
     font-size: 16px;
     color: #000000;
     cursor: pointer;
+}
+
+
+/* ================================================= News Page ========================================================*/
+
+.search-field {
+    width: 214px;
+    height: 25px;
+    float: right;
+    background: #F2F2F2;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+.search-form > input[type="search"] {
+    background: rgba(0, 0, 0, 0);
+    font-family: PTSansRegular, sans-serif;
+    font-size: 16px;
+    color: #999999;
+    border: none;
+    width: 182px;
+    padding-left: 15px;
+    float: left;
+}
+
+.search-form > input[type="search"]:focus {
+    outline: none;
+}
+
+.search-form > button[type="submit"] {
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    float: right;
+}
+
+.search-form > button > img {
+    vertical-align: top;
+    margin-top: 4px;
+}
+
+.search-form > button[type="submit"] {
+    outline: none;
+}
+
+.news-grid {
+    padding-top: 60px;
+    width: auto;
+}
+
+.one-post {
+    width: 778px;
+    height: auto;
+    border-bottom: 1px solid rgba(77, 77, 77, 0.5);
+    margin: 0 auto 10px auto;
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.post-preview {
+    width: 187px;
+    height: 100%;
+    float: left;
+}
+
+.post-image-container {
+    width: 160px;
+    height: 121px;
+    overflow: hidden;
+    text-align: center;
+    margin: 0 auto;
+    vertical-align: top;
+}
+
+.post-image-container > img {
+    width: 100%;
+    vertical-align: middle;
+    cursor: pointer;
+
+    -webkit-transition: width 1s;
+    -moz-transition: width 1s;
+    -ms-transition: width 1s;
+    -o-transition: width 1s;
+    transition: width 1s;
+}
+
+.post-image-container > img:hover {
+    width: 200px;
+
+    -webkit-transition: width 1s;
+    -moz-transition: width 1s;
+    -ms-transition: width 1s;
+    -o-transition: width 1s;
+    transition: width 1s;
+}
+
+
+.post-content {
+    float: right;
+    padding-top: 5px;
+    width: 591px;
+}
+
+.post-title {
+    font-family: PTSansBold, sans-serif;
+    font-size: 16px;
+    color: #000;
+    overflow: hidden;
+}
+
+.post-date {
+    font-family: PTSansRegular, sans-serif;
+    font-size: 12px;
+    color: #808080;
+    margin-top: 10px;
+}
+
+.post-text {
+    font-family: PTSansRegular, sans-serif;
+    font-size: 16px;
+    color: #000;
+    margin-top: 10px;
+}
+
+.post-entry-link {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.post-entry-link > a {
+    font-family: PTSansBold, sans-serif;
+    font-size: 11px;
+    color: #999999;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 20px 10px 20px;
+    background: rgba(0, 0, 0, 0);
+    border: 1px solid #999999;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;
+    text-align: center;
+
+    -webkit-transition: background, color 0.5s;
+    -moz-transition: background, color 0.5s;
+    -ms-transition: background, color 0.5s;
+    -o-transition: background, color 0.5s;
+    transition: background, color 0.5s;
+}
+
+.post-entry-link > a:hover {
+    background: #999999;
+    color: #ffffff;
+
+    -webkit-transition: background, color 0.5s;
+    -moz-transition: background, color 0.5s;
+    -ms-transition: background, color 0.5s;
+    -o-transition: background, color 0.5s;
+    transition: background, color 0.5s;
+}
+
+.without-preview {
+    padding-top: 30px;
 }

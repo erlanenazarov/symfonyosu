@@ -14,7 +14,7 @@ class PostsController extends AbstractController
 
         return $this->render('OSUAppBundle:Posts:posts.html.twig', array_merge($this->generateViewParams($request), array(
             'location' => 'home',
-            'posts' => $posts
+            'news' => $posts
         )));
     }
 

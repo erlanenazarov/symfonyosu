@@ -27,6 +27,8 @@ class PostAdmin extends Admin
     {
         $listMapper
             ->add('id')
+            ->add('title')
+            ->add('preview')
             ->add('date')
             ->add('_action', 'actions', array(
                 'actions' => array(
@@ -44,8 +46,9 @@ class PostAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
+            ->add('title')
+            ->add('preview', 'sonata_type_model_list')
             ->add('content')
-            ->add('date')
         ;
     }
 
@@ -55,6 +58,7 @@ class PostAdmin extends Admin
     protected function configureShowFields(ShowMapper $showMapper)
     {
         $showMapper
+            ->add('title')
             ->add('content')
             ->add('date')
         ;

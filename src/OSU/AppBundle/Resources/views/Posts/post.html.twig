@@ -3,14 +3,12 @@
 {% block title %}News{% endblock %}
 
 {% block header_container_wrap %}
-    {{ parent() }}
-    <div class="page-title">News</div>
+    <img src="{{ asset('bundles/osuapp/images/News.png') }}" />
+    <div class="page-title">Latest News</div>
 {% endblock %}
 
 {% block content %}
-    <hr />
+    <h1>{{ post.title }}</h1>
+    <div class="post-date">{{ post.date|date('Y-m-d') }}</div>
     <p>{{ post.content }}</p>
-    <p class="new-item-date">{{ post.date|date('Y-m-d') }}</p>
-    <p><a href="{{ path('post', {id: post.id}) }}">Read more...</a></p>
-    <hr />
 {% endblock %}

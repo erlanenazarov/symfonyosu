@@ -196,6 +196,7 @@
                 $(document).ready(function () {
                     ReplaceDate('.new-item-date');
                     ReplaceDate('.date > span');
+                    ReplaceDate('.post-date');
                 });
             </script>
             <script>
@@ -245,6 +246,46 @@
                     });
                 });
 
+            </script>
+            <script>
+                $(document).ready(function() {
+                    var searchBar = $('input[type="search"]');
+                    var isSearchFocused = false;
+                    $(searchBar).on('focus', function() {
+                        if(!isSearchFocused) {
+                            $(this).parent().parent().animate({
+                                width: '100%'
+                            }, 500);
+                            $(this).animate({
+                                width: '800px'
+                            }, 500);
+                            isSearchFocused = true;
+                        }
+                    });
+                    $(searchBar).on('focusout', function() {
+                        if(isSearchFocused) {
+                            $(this).parent().parent().animate({
+                                width: '214px'
+                            }, 500);
+                            $(this).animate({
+                                width: '182px'
+                            }, 500);
+
+                            isSearchFocused = false;
+                        }
+                    });
+
+
+                    var WindowsWidth = $(document).width();
+                    //alert(WindowsWidth);
+                    $('.header').css('width', WindowsWidth);
+                    $('.main-navigation').css('width', WindowsWidth);
+                    $(document).resize(function() {
+                        WindowsWidth = (document).width();
+                        $('.header').css('width', WindowsWidth);
+                        $('.main-navigation').css('width', WindowsWidth);
+                    });
+                });
             </script>
         {% endblock %}
     </body>

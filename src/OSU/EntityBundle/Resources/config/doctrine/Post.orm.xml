@@ -4,7 +4,17 @@
     <id name="id" type="integer" column="id">
       <generator strategy="AUTO"/>
     </id>
+    <field name="title" type="string" column="title" nullable="true" />
     <field name="content" type="text" column="content"/>
     <field name="date" type="date" column="date"/>
+
+    <many-to-one target-entity="Application\Sonata\MediaBundle\Entity\Media" field="preview">
+        <join-column name="preview_id" nullable="true" referenced-column-name="id" />
+    </many-to-one>
+    <lifecycle-callbacks>
+        <lifecycle-callback type="prePersist" method="prePersist"/>
+        <lifecycle-callback type="preUpdate" method="preUpdate"/>
+    </lifecycle-callbacks>
+
   </entity>
 </doctrine-mapping>
