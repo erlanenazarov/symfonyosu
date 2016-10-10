@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd2ab7cc-41fc-43b3-86e2-4fc745cbb07c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSU/AppBundle/Resources/views/Contacts/contact.html.twig" afterPath="$PROJECT_DIR$/src/OSU/AppBundle/Resources/views/Contacts/contact.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSU/AppBundle/Resources/views/Admission/admission.html.twig" afterPath="$PROJECT_DIR$/src/OSU/AppBundle/Resources/views/Admission/admission.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OSU/AppBundle/Resources/public/css/style.css" afterPath="$PROJECT_DIR$/src/OSU/AppBundle/Resources/public/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -67,11 +67,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/OSU/AppBundle/Resources/public/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5781866" vertical-offset="5968" max-vertical-offset="7830">
-              <caret line="1055" column="18" selection-start-line="1055" selection-start-column="18" selection-end-line="1055" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="5969" max-vertical-offset="7920">
+              <caret line="1094" column="23" selection-start-line="1094" selection-start-column="23" selection-end-line="1094" selection-end-column="23" />
               <folding>
                 <element signature="e#11#93#0" expanded="false" />
                 <element signature="e#106#185#0" expanded="false" />
@@ -197,22 +197,31 @@
                 <element signature="e#21320#21485#0" expanded="false" />
                 <element signature="e#21518#21542#0" expanded="false" />
                 <element signature="e#21569#21680#0" expanded="false" />
-                <element signature="e#21710#21771#0" expanded="false" />
-                <element signature="e#21798#21906#0" expanded="false" />
-                <element signature="e#21919#22080#0" expanded="false" />
-                <element signature="e#22107#22131#0" expanded="false" />
-                <element signature="e#22148#22217#0" expanded="false" />
-                <element signature="e#22244#22378#0" expanded="false" />
-                <element signature="e#22408#22613#0" expanded="false" />
-                <element signature="e#22650#22673#0" expanded="false" />
-                <element signature="e#23094#23156#0" expanded="false" />
-                <element signature="e#23185#23428#0" expanded="false" />
-                <element signature="e#23454#23558#0" expanded="false" />
-                <element signature="e#23601#23731#0" expanded="false" />
-                <element signature="e#23760#23915#0" expanded="false" />
-                <element signature="e#24025#24181#0" expanded="false" />
-                <element signature="e#24225#24265#0" expanded="false" />
+                <element signature="e#21822#21930#0" expanded="false" />
+                <element signature="e#21943#22104#0" expanded="false" />
+                <element signature="e#22131#22155#0" expanded="false" />
+                <element signature="e#22172#22241#0" expanded="false" />
+                <element signature="e#22268#22402#0" expanded="false" />
+                <element signature="e#22432#22637#0" expanded="false" />
+                <element signature="e#22674#22697#0" expanded="false" />
+                <element signature="e#23118#23180#0" expanded="false" />
+                <element signature="e#23209#23452#0" expanded="false" />
+                <element signature="e#23478#23582#0" expanded="false" />
+                <element signature="e#23625#23755#0" expanded="false" />
+                <element signature="e#23784#23939#0" expanded="false" />
+                <element signature="e#24049#24205#0" expanded="false" />
+                <element signature="e#24249#24289#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admission.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/OSU/AppBundle/Resources/views/Admission/admission.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5346535" vertical-offset="54" max-vertical-offset="1206">
+              <caret line="33" column="150" selection-start-line="33" selection-start-column="150" selection-end-line="33" selection-end-column="150" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -230,7 +239,7 @@
       <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="5.9259257" vertical-offset="1672" max-vertical-offset="4626">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1672" max-vertical-offset="4626">
               <caret line="84" column="46" selection-start-line="84" selection-start-column="46" selection-end-line="84" selection-end-column="46" />
               <folding />
             </state>
@@ -240,7 +249,7 @@
       <file leaf-file-name="contact.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/OSU/AppBundle/Resources/views/Contacts/contact.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-31.666666" vertical-offset="225" max-vertical-offset="1296">
+            <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1296">
               <caret line="60" column="34" selection-start-line="60" selection-start-column="34" selection-end-line="60" selection-end-column="34" />
               <folding />
             </state>
@@ -321,7 +330,6 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/OSU/AppBundle/Resources/views/Courses/courses.html.twig" />
         <option value="$PROJECT_DIR$/src/OSU/AppBundle/Resources/views/Tuition/tuition.html.twig" />
-        <option value="$PROJECT_DIR$/src/OSU/AppBundle/Resources/views/Admission/admission.html.twig" />
         <option value="$PROJECT_DIR$/src/OSU/AppBundle/Resources/public/css/default.css" />
         <option value="$PROJECT_DIR$/src/OSU/AppBundle/Resources/public/css/modals.css" />
         <option value="$PROJECT_DIR$/app/config/sonata/media.yml" />
@@ -336,6 +344,7 @@
         <option value="$PROJECT_DIR$/src/OSU/AppBundle/Resources/views/Index/index.html.twig" />
         <option value="$PROJECT_DIR$/src/OSU/AppBundle/Resources/views/Contacts/contact.html.twig" />
         <option value="$PROJECT_DIR$/src/OSU/AppBundle/Resources/public/css/style.css" />
+        <option value="$PROJECT_DIR$/src/OSU/AppBundle/Resources/views/Admission/admission.html.twig" />
       </list>
     </option>
   </component>
@@ -345,7 +354,7 @@
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="71" />
-    <option name="y" value="1224" />
+    <option name="y" value="24" />
     <option name="width" value="1529" />
     <option name="height" value="1176" />
   </component>
@@ -372,6 +381,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -796,7 +806,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -884,18 +893,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="71" y="1224" width="1529" height="1176" extended-state="6" />
-    <editor active="false" />
+    <frame x="71" y="24" width="1529" height="1176" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24881996" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2521915" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962963" sideWeight="0.5003372" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290627" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26759258" sideWeight="0.49966285" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26759258" sideWeight="0.49966285" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1153,13 +1162,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OSU/AppBundle/Resources/views/Admission/admission.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3029703" vertical-offset="54" max-vertical-offset="1206">
-          <caret line="20" column="457" selection-start-line="20" selection-start-column="457" selection-end-line="20" selection-end-column="457" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/OSU/AppBundle/Resources/public/js/classie.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1404">
@@ -1271,7 +1273,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="5.9259257" vertical-offset="1672" max-vertical-offset="4626">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1672" max-vertical-offset="4626">
           <caret line="84" column="46" selection-start-line="84" selection-start-column="46" selection-end-line="84" selection-end-column="46" />
           <folding />
         </state>
@@ -1279,7 +1281,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/OSU/AppBundle/Resources/views/Contacts/contact.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-31.666666" vertical-offset="225" max-vertical-offset="1296">
+        <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1296">
           <caret line="60" column="34" selection-start-line="60" selection-start-column="34" selection-end-line="60" selection-end-column="34" />
           <folding />
         </state>
@@ -1287,8 +1289,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/OSU/AppBundle/Resources/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5781866" vertical-offset="5968" max-vertical-offset="7830">
-          <caret line="1055" column="18" selection-start-line="1055" selection-start-column="18" selection-end-line="1055" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="5969" max-vertical-offset="7920">
+          <caret line="1094" column="23" selection-start-line="1094" selection-start-column="23" selection-end-line="1094" selection-end-column="23" />
           <folding>
             <element signature="e#11#93#0" expanded="false" />
             <element signature="e#106#185#0" expanded="false" />
@@ -1414,22 +1416,29 @@
             <element signature="e#21320#21485#0" expanded="false" />
             <element signature="e#21518#21542#0" expanded="false" />
             <element signature="e#21569#21680#0" expanded="false" />
-            <element signature="e#21710#21771#0" expanded="false" />
-            <element signature="e#21798#21906#0" expanded="false" />
-            <element signature="e#21919#22080#0" expanded="false" />
-            <element signature="e#22107#22131#0" expanded="false" />
-            <element signature="e#22148#22217#0" expanded="false" />
-            <element signature="e#22244#22378#0" expanded="false" />
-            <element signature="e#22408#22613#0" expanded="false" />
-            <element signature="e#22650#22673#0" expanded="false" />
-            <element signature="e#23094#23156#0" expanded="false" />
-            <element signature="e#23185#23428#0" expanded="false" />
-            <element signature="e#23454#23558#0" expanded="false" />
-            <element signature="e#23601#23731#0" expanded="false" />
-            <element signature="e#23760#23915#0" expanded="false" />
-            <element signature="e#24025#24181#0" expanded="false" />
-            <element signature="e#24225#24265#0" expanded="false" />
+            <element signature="e#21822#21930#0" expanded="false" />
+            <element signature="e#21943#22104#0" expanded="false" />
+            <element signature="e#22131#22155#0" expanded="false" />
+            <element signature="e#22172#22241#0" expanded="false" />
+            <element signature="e#22268#22402#0" expanded="false" />
+            <element signature="e#22432#22637#0" expanded="false" />
+            <element signature="e#22674#22697#0" expanded="false" />
+            <element signature="e#23118#23180#0" expanded="false" />
+            <element signature="e#23209#23452#0" expanded="false" />
+            <element signature="e#23478#23582#0" expanded="false" />
+            <element signature="e#23625#23755#0" expanded="false" />
+            <element signature="e#23784#23939#0" expanded="false" />
+            <element signature="e#24049#24205#0" expanded="false" />
+            <element signature="e#24249#24289#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OSU/AppBundle/Resources/views/Admission/admission.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5346535" vertical-offset="54" max-vertical-offset="1206">
+          <caret line="33" column="150" selection-start-line="33" selection-start-column="150" selection-end-line="33" selection-end-column="150" />
+          <folding />
         </state>
       </provider>
     </entry>
